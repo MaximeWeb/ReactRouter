@@ -15,7 +15,7 @@ export default function Header() {
     <img className="logoKAZA" src='../public/LOGO.png'></img>
     <div className='flex between nav'>
           <Link to="/">Accueil</Link>
-        <Link to="/a-propos">À propos</Link>
+        <Link to="/about">À propos</Link>
     </div>
     </div>
   );

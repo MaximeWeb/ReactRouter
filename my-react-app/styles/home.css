@@ -77,10 +77,10 @@
 .bannerTitle {
   position: relative;
   bottom: 190px;
-  left: 280px;
   font-size: 48px;
   color: white;
   font-weight: bold;
+text-align: center;
 }
 
 .body {
@@ -139,4 +139,36 @@
 
 .footerImgText {
   margin-top: 40px;
+}
+
+
+.infoSpace {
+
+   margin-top: 30px;
+}
+.infoBar {
+     margin: auto;
+     margin-top: 20px;
+    width: 1000px;
+    height: 42px;
+    background-color: #FF6060;
+    border-radius: 6px;
+    color:white;
+    padding-top: 12px;
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.iconChevron {
+    margin-right: 20px;
+   width: 32px;
+   height: 32px;
+}
+
+.textInfo {
+    width: 1000px;
+    padding : 10px 10px 10px;
+    margin: auto;
+    background-color: whitesmoke;
 }
