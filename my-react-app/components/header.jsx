@@ -1,4 +1,5 @@
 import '../styles/home.css';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
 
@@ -13,8 +14,8 @@ export default function Header() {
     <div className='flex between header'>
     <img className="logoKAZA" src='../public/LOGO.png'></img>
     <div className='flex between nav'>
-          <p>Accueil</p>
-    <p>A propos</p>
+          <Link to="/">Accueil</Link>
+        <Link to="/a-propos">À propos</Link>
     </div>
     </div>
   );

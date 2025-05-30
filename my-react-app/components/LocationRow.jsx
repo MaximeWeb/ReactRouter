@@ -1,6 +1,8 @@
 import '../styles/home.css';
 
 export const LocationRow = ({location}) => {
+
+  
   return (<div key={location.id}>
    
     <div className='cards'> 

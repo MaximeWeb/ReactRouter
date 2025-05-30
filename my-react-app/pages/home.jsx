@@ -1,6 +1,6 @@
 import '../styles/home.css';
 import locations from '../data/locations.js';
-import LocationRow from './LocationRow.jsx'
+import LocationRow from '../components/LocationRow.jsx'
 
 // import { useState } from 'react';
 

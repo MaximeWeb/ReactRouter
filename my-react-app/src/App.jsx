@@ -1,23 +1,18 @@
-import Home from "../components/Home";
-import Header from "../components/header.jsx";
-import Footer from "../components/footer.jsx";
-import locations from '../data/locations.js';
-import '../styles/global.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from '../components/layout';
+import Home from '../pages/home';
+import About from '../pages/about';
 
 
-
-
-function App() {
+export default function App() {
   return (
-   <div>
-    < Header />
-    <Home />
-    <Footer/>
- 
-    </div>
-
- 
+    <Router>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/a-propos" element={<About />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
