@@ -90,17 +90,23 @@ text-align: center;
   margin-top: 40px;
   border-radius: 16px;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 /* LOCATIONROW */
 
 .cards {
   margin: auto;
+  margin-bottom: 40px;
   width: 340px;
   height: 340px;
   border-radius: 10px;
   background-color: red;
+  
+}
+
+.cards a {
+text-decoration: none;
 }
 
 .imgCards {
@@ -115,9 +121,10 @@ text-align: center;
   height: 60px;
   position: relative;
   bottom: 70px;
-  left: 60px;
+  left: 30px;
   color: white;
   font-weight: bold;
+ 
 }
 
 /* FOOTER */
@@ -164,6 +171,17 @@ text-align: center;
     margin-right: 20px;
    width: 32px;
    height: 32px;
+   cursor: pointer;
+}
+
+.iconChevron.rotateLeft {
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease;
+}
+
+.iconChevron.rotateRigth {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
 }
 
 .textInfo {
@@ -171,4 +189,136 @@ text-align: center;
     padding : 10px 10px 10px;
     margin: auto;
     background-color: whitesmoke;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.errorText {
+ color: #FF6060;
+ font-size: 288px;
+ margin: auto;
+ margin-top: 50px;
+ text-align: center;
+ line-height: 143%;
+ font-weight: 700;
+}
+
+.errorText2 {
+ color: #FF6060;
+ font-size: 36px;
+ font-weight: 500;
+ margin-bottom: 150px;
+ 
+}
+.errorLinkHome {
+  text-align: center;
+  /* text-decoration: none; */
+  color: black;
+
+}
+
+.errorDiv {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 110px;
+}
+
+/* FICHE */ 
+
+.imgFiche {
+  width: 1240px;
+  height: 415px;
+   border-radius: 16px;
+}
+
+.bannerFiche {
+    width: 1240px;
+  height: 415px;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-top: 50px;
+}
+
+.bodyFiche {
+  width: 1240px;
+  margin: auto;
+  
+}
+
+.titleFiche {
+color: #FF6060;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 143%;
+  margin-bottom: 5px;
+  /* margin-top: 0px; */
+}
+
+.locationFiche {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0px;
+}
+
+.tagsContainer {
+  display: flex;
+}
+
+.tagFiche {
+  margin-right: 20px;
+  height: 22px;
+  text-align: center;
+  background-color: #FF6060;
+  color:white;
+ padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+}
+
+.infoBarFiche {
+     margin: auto;
+     margin-top: 20px;
+    width: 582px;
+    height: 42px;
+    background-color: #FF6060;
+    border-radius: 6px;
+    color:white;
+    padding-top: 12px;
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.textInfoFiche {
+    width: 582px;
+    padding : 10px 10px 10px;
+    margin: auto;
+    background-color: whitesmoke;
+}
+
+.imgHost {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.contactFiche {
+  margin-top: 30px;
+  width: 167px;
+}
+
+.nameHost {
+  width: 93px;
+  margin-top: 15px;
+  color:#FF6060;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.starIcon {
+  width: 24px;
+  height: 24px;
 }

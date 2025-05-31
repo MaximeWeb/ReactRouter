@@ -10,7 +10,7 @@ export default function Home() {
   
   if (locations.length)
     display = locations.map((location) => <LocationRow key={location.id} location={location} />)
-  
+ 
   return (
     <div>
       <div className='bannerHome'>
