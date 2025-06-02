@@ -1,30 +1,15 @@
-import "../styles/home.css";
+import "../styles/global.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-
-
-
-
+import {  useState } from "react";
 
 export default function About() {
 
 
- const showRemoveHiddenOnTarget = (e) => {
-  const chevron = e.currentTarget;
-  const elementText = chevron.parentElement.nextElementSibling; /* prend la div textInfo */
-  console.log(elementText)
-  
-  if (elementText.classList.contains("hidden")) {
-    elementText.classList.remove("hidden");
-     chevron.classList.add("rotateLeft");
-      chevron.classList.remove("rotateRigth");
-  } else if (!elementText.classList.contains("hidden")) {
-    elementText.classList.add("hidden");
-      chevron.classList.remove("rotateLeft");
-       chevron.classList.add("rotateRigth");
-       
-  }
-};
+ const [showFiabilite, setShowFiabilite] = useState(false);
+  const [showRespect, setShowRespect] = useState(false);
+   const [showService, setShowService] = useState(false);
+    const [showSecurite, setShowSecurite] = useState(false);
 
   return (
     <div>
@@ -34,14 +19,16 @@ export default function About() {
       <div className="infoSpace">
         <div className="infoBar flex between">
           Fiabilité
-          <FontAwesomeIcon
-          onClick={showRemoveHiddenOnTarget}
-            className="iconChevron"
-            icon={faChevronUp}
-            size="2x"
-          />
+        <FontAwesomeIcon
+                onClick={() => setShowFiabilite(!showFiabilite)} /* passe a true */
+                className={`iconChevron ${
+                  showFiabilite ? "rotateLeft" : "rotateRigth"
+                }`} 
+                icon={faChevronUp}
+                size="2x"
+              />
         </div>
-        <div className="textInfo hidden">
+        <div  className={`textInfo ${!showFiabilite ? "hidden" : ""}`}>
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale.Les
             photos sont conformes aux logements, et toutes les informations sont
@@ -49,15 +36,17 @@ export default function About() {
           </p>
         </div>
         <div className="infoBar flex between">
-          Respect{" "}
-          <FontAwesomeIcon
-            onClick={showRemoveHiddenOnTarget}
-            className="iconChevron"
-            icon={faChevronUp}
-            size="2x"
-          />
+          Respect
+         <FontAwesomeIcon
+                onClick={() => setShowRespect(!showRespect)} /* passe a true */
+                className={`iconChevron ${
+                  showRespect ? "rotateLeft" : "rotateRigth"
+                }`} 
+                icon={faChevronUp}
+                size="2x"
+              />
         </div>
-        <div className="textInfo hidden">
+        <div className={`textInfo ${!showRespect ? "hidden" : ""}`}>
           <p>
             La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
             comportement discriminatoire ou de perturbation du voisinage
@@ -66,14 +55,16 @@ export default function About() {
         </div>
         <div className="infoBar flex between">
           Service
-          <FontAwesomeIcon
-             onClick={showRemoveHiddenOnTarget}
-            className="iconChevron"
-            icon={faChevronUp}
-            size="2x"
-          />
+         <FontAwesomeIcon
+                onClick={() => setShowService(!showService)} /* passe a true */
+                className={`iconChevron ${
+                  showService ? "rotateLeft" : "rotateRigth"
+                }`} 
+                icon={faChevronUp}
+                size="2x"
+              />
         </div>
-        <div className="textInfo hidden">
+        <div className={`textInfo ${!showService ? "hidden" : ""}`}>
           <p>
             La qualité du service est au coeur de notre engagement chez Kasa.
             Nous veillons à ce que chaque interaction, que ce soit avec nos
@@ -84,13 +75,15 @@ export default function About() {
         <div className="infoBar flex between">
           Sécurité
           <FontAwesomeIcon
-             onClick={showRemoveHiddenOnTarget}
-            className="iconChevron"
-            icon={faChevronUp}
-            size="2x"
-          />
+                onClick={() => setShowSecurite(!showSecurite)} /* passe a true */
+                className={`iconChevron ${
+                  showSecurite ? "rotateLeft" : "rotateRigth"
+                }`} 
+                icon={faChevronUp}
+                size="2x"
+              />
         </div>
-        <div className="textInfo hidden">
+        <div className={`textInfo ${!showSecurite ? "hidden" : ""}`}>
           <p>
             La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
             pour les voyageurs, chaque logement correspond aux critères de

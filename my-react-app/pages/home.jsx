@@ -1,4 +1,4 @@
-import '../styles/home.css';
+import '../styles/global.scss';
 import locations from '../data/locations.js';
 import LocationRow from '../components/LocationRow.jsx'
 
@@ -9,7 +9,7 @@ export default function Home() {
   let display = <div>No Locations</div>;
   
   if (locations.length)
-    display = locations.map((location) => <LocationRow key={location.id} location={location} />)
+    display = locations.map((location) => <LocationRow key={location.id} location={location} />) /* ici on va indiquer le parametre du composant locationRow  et on map pour le display*/
  
   return (
     <div>

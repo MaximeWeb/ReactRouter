@@ -1,4 +1,4 @@
-import '../styles/home.css';
+import '../styles/global.scss';
 import { Link } from 'react-router-dom';
 // import locations from '../data/locations.js';
 // import LocationRow from '../components/LocationRow.jsx'
