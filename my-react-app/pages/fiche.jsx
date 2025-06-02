@@ -1,4 +1,4 @@
-import { useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faStar } from "@fortawesome/free-solid-svg-icons";
@@ -8,10 +8,14 @@ import Error from "./error";
 import "../styles/global.scss";
 
 export default function Fiche() {
-  const { id } = useParams(); /* useParam recupere les parametre de l'url (id) */
+  const { id } =
+    useParams(); /* useParam recupere les parametre de l'url (id) */
   // const navigate = useNavigate(); /* useNavigate permet de naviguer sur une autre route */
-  const [location, setLocation] = useState( null ); /* on crée un etat vide "location" qui est null initialement */
-   
+  const [location, setLocation] =
+    useState(
+      null
+    ); /* on crée un etat vide "location" qui est null initialement */
+
   const [showDescription, setShowDescription] = useState(false);
   const [showEquipments, setShowEquipments] = useState(false);
 
@@ -44,17 +48,12 @@ export default function Fiche() {
         <div className="bannerFiche">
           <img className="imgFiche" src={location.cover} alt={location.title} />
         </div>
-        <div className=" flex between">
+        <div className="flex between block">
+ <div>
+ <div className=" flex between">
           <p className="titleFiche">{location.title}</p>
-          <div className=" contactFiche flex">
-            <p className="nameHost">{location.host.name}</p>
-            <img
-              className="imgHost"
-              src={location.host.picture}
-              alt="imageHost"
-            />
-          </div>
         </div>
+
 
         <p className="locationFiche">{location.location}</p>
 
@@ -66,8 +65,19 @@ export default function Fiche() {
               </div>
             ))}
           </div>
-
-          <div>
+        </div>
+        </div>
+       
+        <div className="BlocContactStars">
+  <div className=" contactFiche flex">
+            <p className="nameHost">{location.host.name}</p>
+            <img
+              className="imgHost"
+              src={location.host.picture}
+              alt="imageHost"
+            />
+          </div>
+          <div className="blocStars">
             {[...Array(5)].map((_, index) => {
               return (
                 <FontAwesomeIcon
@@ -84,47 +94,55 @@ export default function Fiche() {
               );
             })}
           </div>
+  </div>  
         </div>
+       
 
-        <div className="flex between">
-          <div>
-            <div className="infoBarFiche flex between">
-              Description
-              <FontAwesomeIcon
-                onClick={() => setShowDescription(!showDescription)} /* passe a true */
-                className={`iconChevron ${
-                  showDescription ? "rotateLeft" : "rotateRigth"
-                }`} 
-                icon={faChevronUp}
-                size="2x"
-              />
+        <div className="flex between block">
+         
+            <div>
+              <div className="infoBarFiche flex between">
+                Description
+                <FontAwesomeIcon
+                  onClick={() =>
+                    setShowDescription(!showDescription)
+                  } /* passe a true */
+                  className={`iconChevron ${
+                    showDescription ? "rotateLeft" : "rotateRigth"
+                  }`}
+                  icon={faChevronUp}
+                  size="2x"
+                />
+              </div>
+              <div
+                className={`textInfoFiche ${!showDescription ? "hidden" : ""}`}
+              >
+                <p>{location.description}</p>
+              </div>
             </div>
-            <div
-              className={`textInfoFiche ${!showDescription ? "hidden" : ""}`}
-            >
-              <p>{location.description}</p>
+            <div>
+              <div className="infoBarFiche flex between">
+                Equipements
+                <FontAwesomeIcon
+                  onClick={() => setShowEquipments(!showEquipments)}
+                  className={`iconChevron ${
+                    showEquipments ? "rotateLeft" : "rotateRigth"
+                  }`}
+                  icon={faChevronUp}
+                  size="2x"
+                />
+              </div>
+              <div
+                className={`textInfoFiche ${!showEquipments ? "hidden" : ""}`}
+              >
+                {location.equipments.map((el, index) => (
+                  <div key={index} className="equipmentFiche">
+                    {el}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="infoBarFiche flex between">
-              Equipements
-              <FontAwesomeIcon
-                onClick={() => setShowEquipments(!showEquipments)}
-                className={`iconChevron ${
-                  showEquipments ? "rotateLeft" : "rotateRigth"
-                }`}
-                icon={faChevronUp}
-                size="2x"
-              />
-            </div>
-            <div className={`textInfoFiche ${!showEquipments ? "hidden" : ""}`}>
-              {location.equipments.map((el, index) => (
-                <div key={index} className="equipmentFiche">
-                  {el}
-                </div>
-              ))}
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
