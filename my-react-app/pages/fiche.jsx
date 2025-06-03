@@ -41,21 +41,22 @@ export default function Fiche() {
       <div className="bodyFiche">
          <div className="bannerFiche">
           <img className="imgFiche" src={location.pictures[index]} alt={location.title}/>
-          
+          {location.pictures.length > 1 && ( /* conditions && expression */
            <FontAwesomeIcon
             onClick={swipeLeft}
                 className="chevronLeft"
                   icon={faChevronLeft}
-                  size="2x"
+                  size="2x" 
                 />
-      
-       
+          )}
+         {location.pictures.length > 1 && (
            <FontAwesomeIcon
              onClick={swipeRight}
                 className="chevronRight"
                   icon={faChevronRight}
                   size="2x"
                 />
+         )}
                   </div>
         <div className="flex between block">
  <div>
