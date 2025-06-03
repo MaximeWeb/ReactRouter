@@ -1,23 +1,32 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faChevronRight, faChevronUp, faStar } from "@fortawesome/free-solid-svg-icons";
 import data from "../data/locations";
 import Error from "./error";
 
 import "../styles/global.scss";
 
 export default function Fiche() {
-  const { id } =
-    useParams(); /* useParam recupere les parametre de l'url (id) */
+  const { id } = useParams(); /* useParam recupere les parametre de l'url (id) */
   // const navigate = useNavigate(); /* useNavigate permet de naviguer sur une autre route */
-  const [location, setLocation] =
-    useState(
-      null
-    ); /* on crée un etat vide "location" qui est null initialement */
+  const [location, setLocation] = useState( null); /* on crée un etat vide "location" qui est null initialement */
 
   const [showDescription, setShowDescription] = useState(false);
   const [showEquipments, setShowEquipments] = useState(false);
+
+ 
+
+  const [index, setIndex] = useState(0)
+  const totalImage = location?.pictures?.length || 0;  /* si location.pictures existe alors recupere la length , optional chaining*/
+
+  const swipeLeft = () => {
+    setIndex((prev) => (prev - 1 + totalImage) % totalImage)
+  }
+  const swipeRight = () => {
+    setIndex((prev) => (prev + 1) % totalImage)
+  }
+
 
   useEffect(() => {
     const foundId = data.find((location) => location.id === id);
@@ -27,27 +36,27 @@ export default function Fiche() {
   if (location === false) return <Error />;
   if (!location) return null;
 
-  // const addRemoveHiddenOnTarget = (e) => {
-  //   const chevron = e.currentTarget;
-  //   const elementText = chevron.parentElement.nextElementSibling;
-
-  //   if (elementText.classList.contains("hidden")) {
-  //     elementText.classList.remove("hidden");
-  //     chevron.classList.add("rotateLeft");
-  //     chevron.classList.remove("rotateRigth");
-  //   } else {
-  //     elementText.classList.add("hidden");
-  //     chevron.classList.remove("rotateLeft");
-  //     chevron.classList.add("rotateRigth");
-  //   }
-  // };
-
   return (
     <div key={location.id}>
       <div className="bodyFiche">
-        <div className="bannerFiche">
-          <img className="imgFiche" src={location.cover} alt={location.title} />
-        </div>
+         <div className="bannerFiche">
+          <img className="imgFiche" src={location.pictures[index]} alt={location.title}/>
+          
+           <FontAwesomeIcon
+            onClick={swipeLeft}
+                className="chevronLeft"
+                  icon={faChevronLeft}
+                  size="2x"
+                />
+      
+       
+           <FontAwesomeIcon
+             onClick={swipeRight}
+                className="chevronRight"
+                  icon={faChevronRight}
+                  size="2x"
+                />
+                  </div>
         <div className="flex between block">
  <div>
  <div className=" flex between">

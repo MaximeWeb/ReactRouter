@@ -193,6 +193,7 @@ $primary-color: #ff6060;
   margin: auto;
   text-align: center;
   margin-bottom: 110px;
+
 }
 
 /* FICHE */
@@ -201,6 +202,29 @@ $primary-color: #ff6060;
   width: 1240px;
   height: 415px;
   border-radius: 16px;
+  z-index: 1;
+  position: relative;
+}
+
+.chevronLeft {
+position: absolute;
+top:40%;
+left: 20px;
+  z-index: 999;
+  cursor: pointer;
+  color:white;
+  width: 96px;
+ height: 119px;
+}
+.chevronRight {
+position: absolute;
+  z-index: 999;
+  top:40%;
+right: 20px;
+cursor: pointer;
+color:white;
+ width: 96px;
+ height: 119px;
 }
 
 .bannerFiche {
@@ -210,6 +234,9 @@ $primary-color: #ff6060;
   object-fit: cover;
   border-radius: 16px;
   margin-top: 50px;
+   z-index: 1;
+  position: relative;
+ 
 }
 
 .bodyFiche {
@@ -536,6 +563,24 @@ $breakpoint-laptop: 1024px;
     margin-top: 20px;
     margin-bottom: 10px;
   }
+
+  .chevronLeft {
+position: absolute;
+top:40%;
+left: 10px;
+
+  width: 46px;
+ height: 69px;
+}
+.chevronRight {
+position: absolute;
+  z-index: 999;
+  top:40%;
+  right: 10px;
+
+ width: 46px;
+ height: 69px;
+}
 
   .bodyFiche {
     width: 335px;
