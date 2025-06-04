@@ -1,7 +1,9 @@
-import { useParams } from "react-router-dom";
+import { useParams, } from "react-router-dom";
+import { useLocation } from 'react-router'
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight, faChevronUp, faStar } from "@fortawesome/free-solid-svg-icons";
+import Chevron from "../components/Chevron";
 import data from "../data/locations";
 import Error from "./error";
 
@@ -42,21 +44,19 @@ export default function Fiche() {
          <div className="bannerFiche">
           <img className="imgFiche" src={location.pictures[index]} alt={location.title}/>
           {location.pictures.length > 1 && ( /* conditions && expression */
-           <FontAwesomeIcon
-            onClick={swipeLeft}
-                className="chevronLeft"
-                  icon={faChevronLeft}
-                  size="2x" 
-                />
-          )}
-         {location.pictures.length > 1 && (
-           <FontAwesomeIcon
-             onClick={swipeRight}
-                className="chevronRight"
-                  icon={faChevronRight}
-                  size="2x"
-                />
-         )}
+          <Chevron 
+          onClick={swipeLeft}
+          icon={faChevronLeft}
+          className="chevronLeft"  
+          />)}
+          {location.pictures.length > 1 && ( /* conditions && expression */
+          <Chevron 
+          onClick={swipeRight}
+          icon={faChevronRight}
+          className="chevronRight"
+          
+          />)}
+         
                   </div>
         <div className="flex between block">
  <div>
