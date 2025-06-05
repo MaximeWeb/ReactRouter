@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       <div className='bannerHome'>
-        <img className="bannerImg" src='./public/IMG.png'></img>
+        <img className="bannerImg" src='/ReactRouter/public/IMG.png'></img>
         <p className='bannerTitle'>Chez vous, partout et ailleurs</p>
       </div>
       <div className='grid body'>
