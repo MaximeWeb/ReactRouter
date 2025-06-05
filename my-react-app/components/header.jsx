@@ -9,7 +9,7 @@ export default function Header() {
     
 
     <div className='flex between header'>
-    <img className="logoKAZA" src='/ReactRouter/public/LOGO.png'></img>
+    <img className="logoKAZA" src='/ReactRouter/LOGO.png'></img>
     <div className='flex between nav'>
           <Link to="/">Accueil</Link>
         <Link to="/about">À propos</Link>

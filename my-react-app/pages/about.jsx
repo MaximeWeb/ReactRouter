@@ -59,7 +59,7 @@ export default function About() {
   return (
     <div>
       <div className="bannerHome">
-        <img className="bannerImg" src="/ReactRouter/public/IMGABOUT.png"></img>
+        <img className="bannerImg" src="/ReactRouter/IMGABOUT.png"></img>
       </div>
       <div className="infoSpace">
         {display}
