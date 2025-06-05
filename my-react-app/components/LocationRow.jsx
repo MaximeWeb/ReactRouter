@@ -13,9 +13,8 @@ export const LocationRow = ({ location }) => { /*on ajoute state dans le link po
             width="200"
           />
           <div className="divTitleCards">
-            <p className="titleCards">{location.title}</p>
           </div>
-          
+           <p className="titleCards">{location.title}</p>
         </Link>
       </div>
     </div>
