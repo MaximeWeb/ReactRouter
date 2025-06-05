@@ -97,15 +97,12 @@ $primary-color: #ff6060;
   width: 340px;
   height: 340px;
   border-radius: 10px;
-  background-color: red;
-   transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 
-  &:hover{
-     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
- 
-
+}
 
 .cards a {
   text-decoration: none;
@@ -116,16 +113,29 @@ $primary-color: #ff6060;
   height: 340px;
   border-radius: 10px;
   object-fit: cover;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5));
+  backdrop-filter: blur(5px);
 }
 
 .titleCards {
   width: 300px;
   height: 60px;
-  position: relative;
-  bottom: 70px;
-  left: 30px;
+
   color: white;
   font-weight: bold;
+}
+.divTitleCards {
+  position: relative;
+  bottom: 64px;
+
+  padding-left: 30px;
+  padding-top: 10px;
+
+  width: 310px;
+  height: 50px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5));
+  backdrop-filter: blur(5px);
 }
 
 /*ABOUT*/
@@ -200,7 +210,6 @@ $primary-color: #ff6060;
   margin: auto;
   text-align: center;
   margin-bottom: 110px;
-
 }
 
 /* FICHE */
@@ -211,28 +220,28 @@ $primary-color: #ff6060;
   border-radius: 16px;
   z-index: 1;
   position: relative;
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .chevronLeft {
-position: absolute;
-top:40%;
-left: 20px;
+  position: absolute;
+  top: 40%;
+  left: 20px;
   z-index: 999;
   cursor: pointer;
-  color:white;
+  color: white;
   width: 96px;
- height: 119px;
+  height: 119px;
 }
 .chevronRight {
-position: absolute;
+  position: absolute;
   z-index: 999;
-  top:40%;
-right: 20px;
-cursor: pointer;
-color:white;
- width: 96px;
- height: 119px;
+  top: 40%;
+  right: 20px;
+  cursor: pointer;
+  color: white;
+  width: 96px;
+  height: 119px;
 }
 
 .bannerFiche {
@@ -242,9 +251,8 @@ color:white;
 
   border-radius: 16px;
   margin-top: 50px;
-   z-index: 1;
+  z-index: 1;
   position: relative;
- 
 }
 
 .bodyFiche {
@@ -472,11 +480,24 @@ $breakpoint-laptop: 1024px;
   .titleCards {
     width: 300px;
     height: 60px;
-    position: relative;
-    bottom: 70px;
-    left: 30px;
+
     color: white;
     font-weight: bold;
+  }
+  .divTitleCards {
+    position: relative;
+    bottom: 64px;
+    padding-left: 30px;
+    padding-top: 10px;
+    width: 310px;
+    height: 50px;
+    border-radius: 10px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.5)
+    );
+    backdrop-filter: blur(5px);
   }
 
   /* ABOUT */
@@ -573,22 +594,22 @@ $breakpoint-laptop: 1024px;
   }
 
   .chevronLeft {
-position: absolute;
-top:40%;
-left: 10px;
+    position: absolute;
+    top: 40%;
+    left: 10px;
 
-  width: 46px;
- height: 69px;
-}
-.chevronRight {
-position: absolute;
-  z-index: 999;
-  top:40%;
-  right: 10px;
+    width: 46px;
+    height: 69px;
+  }
+  .chevronRight {
+    position: absolute;
+    z-index: 999;
+    top: 40%;
+    right: 10px;
 
- width: 46px;
- height: 69px;
-}
+    width: 46px;
+    height: 69px;
+  }
 
   .bodyFiche {
     width: 335px;

@@ -7,7 +7,7 @@ import Fiche from '../pages/fiche';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/ReactRouter/">
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

@@ -1,8 +1,6 @@
 import '../styles/global.scss';
 import locations from '../data/locations.js';
-import LocationRow from '../components/LocationRow.jsx'
-
-// import { useState } from 'react';
+import LocationRow from '../components/LocationRow.jsx';
 
 export default function Home() {
 
@@ -14,7 +12,7 @@ export default function Home() {
   return (
     <div>
       <div className='bannerHome'>
-        <img className="bannerImg" src='../public/IMG.png'></img>
+        <img className="bannerImg" src='./public/IMG.png'></img>
         <p className='bannerTitle'>Chez vous, partout et ailleurs</p>
       </div>
       <div className='grid body'>

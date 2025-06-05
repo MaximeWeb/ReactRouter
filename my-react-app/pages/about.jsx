@@ -1,6 +1,4 @@
 import "../styles/global.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { useState, Fragment } from "react";
 import Chevron from "../components/Chevron";
 const initState = {
@@ -61,7 +59,7 @@ export default function About() {
   return (
     <div>
       <div className="bannerHome">
-        <img className="bannerImg" src="../public/IMGABOUT.png"></img>
+        <img className="bannerImg" src="./public/IMGABOUT.png"></img>
       </div>
       <div className="infoSpace">
         {display}
