@@ -113,8 +113,7 @@ $primary-color: #ff6060;
   height: 340px;
   border-radius: 10px;
   object-fit: cover;
-  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5));
-  backdrop-filter: blur(5px);
+ 
 }
 
 .titleCards {
@@ -126,16 +125,16 @@ $primary-color: #ff6060;
 }
 .divTitleCards {
   position: relative;
-  bottom: 64px;
+  bottom: 104px;
 
   padding-left: 30px;
-  padding-top: 10px;
+  padding-top: 50px;
 
   width: 310px;
   height: 50px;
   border-radius: 10px;
-  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5));
-  backdrop-filter: blur(5px);
+ background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
+  backdrop-filter: blur(1px);
 }
 
 /*ABOUT*/
@@ -497,7 +496,7 @@ $breakpoint-laptop: 1024px;
       transparent,
       rgba(255, 255, 255, 0.5)
     );
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(1px);
   }
 
   /* ABOUT */
